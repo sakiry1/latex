@@ -6,8 +6,18 @@
         <PerGrammarGenerationSettings>
           <option name="fileName" value="$PROJECT_DIR$/NFA.g4" />
           <option name="autoGen" value="true" />
-          <option name="outputDir" value="C:\Users\Katty\IdeaProjects\latex" />
-          <option name="libDir" value="C:\Users\Katty\IdeaProjects\latex" />
+          <option name="outputDir" value="C:\Users\Katty\IdeaProjects\latex\src" />
+          <option name="libDir" value="C:\Users\Katty\IdeaProjects\latex\src" />
+          <option name="encoding" value="" />
+          <option name="pkg" value="" />
+          <option name="language" value="Java" />
+          <option name="generateVisitor" value="true" />
+        </PerGrammarGenerationSettings>
+        <PerGrammarGenerationSettings>
+          <option name="fileName" value="$PROJECT_DIR$/NFA2.g4" />
+          <option name="autoGen" value="true" />
+          <option name="outputDir" value="C:\Users\Katty\IdeaProjects\latex\src" />
+          <option name="libDir" value="C:\Users\Katty\IdeaProjects\latex\src" />
           <option name="encoding" value="" />
           <option name="pkg" value="" />
           <option name="language" value="" />

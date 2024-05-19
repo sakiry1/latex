@@ -1,0 +1,126 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\begin{document}
+\begin{tikzpicture}[->, >=stealth, shorten >=1pt, auto, node distance=4cm and 6cm, semithick]
+\tikzstyle{every state}=[fill=blue!30,draw=none,text=white]
+\node[state, initial, accepting] (state0) [initial] {q1};
+\node[state] (state1) [below left=of q0] {q2};
+\node[state] (state2) [below right=of start] {q3};
+\path (state0) edge node {e} (state2);
+\path (state0) edge node {b} (state1);
+\path (state1) edge node {a} (state2);
+\path (state1) edge node {a} (state1);
+\path (state1) edge node {b} (state2);
+\path (state2) edge node {a} (state0);
+\end{tikzpicture}
+\end{document}
+
+
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\begin{document}
+\begin{tikzpicture}[->, >=stealth, shorten >=1pt, auto, node distance=4cm and 6cm, semithick]
+\tikzstyle{every state}=[fill=blue!30,draw=none,text=white]
+\node[state, accepting] (state0) [initial] {q1};
+\node[state, initial] (state1) [below left=of q0] {q0};
+\path (state0) edge node {a} (state1);
+\path (state1) edge node {e} (state0);
+\end{tikzpicture}
+\end{document}
+
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\begin{document}
+\begin{tikzpicture}[->, >=stealth, shorten >=1pt, auto, node distance=4cm and 6cm, semithick]
+\tikzstyle{every state}=[fill=blue!30,draw=none,text=white]
+\node[state] (state0) [initial] {q1};
+\node[state] (state1) [below left=of q0] {q2};
+\node[state] (state2) [below right=of start] {q3};
+\node[state, accepting] (state3) [below left=of q2] {q4};
+\node[state] (state4) [below right=of q2] {q5};
+\node[state] (state5) [below left=of q4] {q6};
+\node[state, initial] (state6) [below right=of q4] {q0};
+\path (state0) edge node {e} (state1);
+\path (state4) edge node {a} (state5);
+\path (state6) edge node {a} (state2);
+\path (state6) edge node {a} (state3);
+\path (state6) edge node {a} (state4);
+\path (state6) edge node {a} (state0);
+\end{tikzpicture}
+\end{document}
+
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\begin{document}
+\begin{tikzpicture}[->, >=stealth, shorten >=1pt, auto, node distance=4cm and 6cm, semithick]
+\tikzstyle{every state}=[fill=blue!30,draw=none,text=white]
+\node[state, initial, accepting] (state0) [initial] {q1};
+\node[state] (state1) [below left=of q0] {q2};
+\node[state] (state2) [below right=of start] {q3};
+\path (state0) edge node {e} (state2);
+\path (state0) edge node {b} (state1);
+\path (state1) edge node {a} (state2);
+\path (state1) edge node {a} (state1);
+\path (state1) edge node {b} (state2);
+\path (state2) edge node {a} (state0);
+\end{tikzpicture}
+\end{document}
+
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\begin{document}
+\begin{tikzpicture}[->, >=stealth, shorten >=1pt, auto, node distance=4cm and 6cm, semithick]
+\tikzstyle{every state}=[fill=blue!30,text=white]
+\node[state, accepting] (0) [initial] {q1};
+\node[state, initial ] (1) [below right=of state0] {q0};
+\path (state0) edge node {a} (state1);
+\path (state1) edge node {e} (state0);
+\end{tikzpicture}
+\end{document}
+
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\begin{document}
+\begin{tikzpicture}[->, >=stealth, shorten >=1pt, auto, node distance=4cm and 6cm, semithick]
+\tikzstyle{every state}=[fill=blue!30,text=white]
+\node[state] (0) [initial] {q1};
+\node[state] (1) [below right=of state0] {q2};
+\node[state] (2) [below left=of state1] {q3};
+\node[state, accepting] (3) [right=of state2] {q4};
+\node[state] (4) [left=of state3] {q5};
+\node[state] (5) [below state4] {q6};
+\node[state, initial ] (6) [below right=of state5] {q0};
+\path (state0) edge node {e} (state1);
+\path (state4) edge node {a} (state5);
+\path (state6) edge node {a} (state2);
+\path (state6) edge node {a} (state3);
+\path (state6) edge node {a} (state4);
+\path (state6) edge node {a} (state0);
+\end{tikzpicture}
+\end{document}
+
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\begin{document}
+\begin{tikzpicture}[->, >=stealth, shorten >=1pt, auto, node distance=4cm and 6cm, semithick]
+\tikzstyle{every state}=[fill=blue!30,text=white]
+\node[state, initial , accepting] (0) [initial] {q1};
+\node[state] (1) [below right=of state0] {q2};
+\node[state] (2) [below left=of state1] {q3};
+\path (state0) edge node {e} (state2);
+\path (state0) edge node {b} (state1);
+\path (state1) edge node {a} (state2);
+\path (state1) edge node {a} (state1);
+\path (state1) edge node {b} (state2);
+\path (state2) edge node {a} (state0);
+\end{tikzpicture}
+\end{document}
+

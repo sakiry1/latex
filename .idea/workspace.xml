@@ -4,32 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="172ec743-0aad-4bc8-9556-56ccfdfdd248" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ANTLRv4ToolGrammarProperties.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/antlr_4_13_1_complete.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NFA.g4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NFAs_TEST.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interprete.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFA.interp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFA.tokens" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFABaseListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFABaseVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFAInterpreter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFALexer.interp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFALexer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFALexer.tokens" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFAListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFAParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFAToDFALatexListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFAVisitor.java" afterDir="false" />
+    <list default="true" id="172ec743-0aad-4bc8-9556-56ccfdfdd248" name="Changes" comment="Parte latex, creado grammar y interprete">
+      <change afterPath="$PROJECT_DIR$/NFA2.g4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TEST.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NFA2.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NFA2.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NFA2BaseVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NFA2Lexer.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NFA2Lexer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NFA2Lexer.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NFA2Listener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NFA2Parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NFA2Visitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NFAToTikZ.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/src.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ANTLRv4ToolGrammarProperties.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ANTLRv4ToolGrammarProperties.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NFAs_TEST.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/NFAs_TEST.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/latex.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interprete.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NFA.interp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NFA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NFA.tokens" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NFABaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NFA2BaseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NFABaseVisitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NFAInterpreter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NFALexer.interp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NFALexer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NFALexer.tokens" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NFAListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NFAParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NFAToDFALatexListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NFAVisitor.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +47,34 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sakiry1&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sakiry1/latex&quot;,
+    &quot;accountId&quot;: &quot;a6d1d8a4-c870-4955-9f75-44b5434f8c66&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2geg7AbH2iaHhT9oyRIFzxdDa7C" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -55,29 +85,36 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Application.NFAInterpreter.executor": "Run",
+    "Application.NFAToTikZ (1).executor": "Run",
+    "Application.NFAToTikZ.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Katty/IdeaProjects/latex",
-    "project.structure.last.edited": "Libraries",
+    "last_opened_file_path": "C:/Users/Katty/IdeaProjects/latex/src",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "antlr.new.intellij.plugin.configdialogs.ANTLRv4ProjectSettings"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="src2" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Katty\IdeaProjects\latex" />
       <recent name="C:\Users\Katty\IdeaProjects\latex\src" />
+      <recent name="C:\Users\Katty\IdeaProjects\latex" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Katty\IdeaProjects\latex\src2" />
       <recent name="C:\Users\Katty\IdeaProjects\latex\.idea" />
       <recent name="C:\Users\Katty\IdeaProjects\latex\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NFAInterpreter">
+  <component name="RunManager" selected="Application.NFAToTikZ (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="latex" />
@@ -92,8 +129,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NFAToTikZ (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NFAToTikZ" />
+      <module name="src" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NFAToTikZ" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src2.NFAToTikZ" />
+      <module name="latex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NFAToTikZ (1)" />
+        <item itemvalue="Application.NFAToTikZ" />
         <item itemvalue="Application.NFAInterpreter" />
         <item itemvalue="Application.Main" />
       </list>
@@ -108,6 +167,30 @@
       <option name="presentableId" value="Default" />
       <updated>1716063288412</updated>
     </task>
+    <task id="LOCAL-00001" summary="Parte latex, creado grammar y interprete">
+      <option name="closed" value="true" />
+      <created>1716064585339</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716064585340</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Parte latex, creado grammar y interprete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parte latex, creado grammar y interprete" />
   </component>
 </project>
