@@ -78,7 +78,9 @@ The grammar defines the structure of the input file that specifies an NFA. The g
         WS : [ \t\r\n]+ -> skip;
 
 This grammar defines rules for specifying states, transitions, and initial and accepting states of an NFA.
-![Parse tree](https://imgur.com/a/xwgtvfx)
+
+![Captura](https://github.com/sakiry1/latex/assets/38807848/4d680059-e047-4972-b43c-d0a4deece87a)
+
 
 ### Interpreter Explanation
 
