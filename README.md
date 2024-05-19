@@ -10,23 +10,23 @@ Below are the steps for installing the necessary components to develop and run t
 
    Windows:
 
-       Download the JDK from Oracle's website.
-       Run the installer and follow the instructions.
+   Download the JDK from Oracle's website.
+   Run the installer and follow the instructions.
        Set the JAVA_HOME environment variable and add bin to your PATH.
 
 2. Installation of ANTLR
 
-    ANTLR is used to generate the parser from the grammar. Follow these steps:
+   ANTLR is used to generate the parser from the grammar. Follow these steps:
 
-        Download the ANTLR JAR from ANTLR's official website.
-        Save the JAR in a specific directory, for example, C:\antlr\antlr-4.13.1-complete.jar.
+   Download the ANTLR JAR from ANTLR's official website.
+   Save the JAR in a specific directory, for example, C:\antlr\antlr-4.13.1-complete.jar.
 
 3. Installation of IntelliJ IDEA
 
-    IntelliJ IDEA is an Integrated Development Environment (IDE) that will be used to write and run the Java code:
+IntelliJ IDEA is an Integrated Development Environment (IDE) that will be used to write and run the Java code:
 
-         Download and install IntelliJ IDEA from JetBrains website.
-         Follow the installer instructions.
+   Download and install IntelliJ IDEA from JetBrains website.
+   Follow the installer instructions.
 
 ### 4. Configuring ANTLR in IntelliJ IDEA
 
@@ -60,8 +60,6 @@ ANTLR works seamlessly with IntelliJ IDEA through a plugin that provides support
 
 By following these steps, you'll have ANTLR set up and integrated into your IntelliJ IDEA environment, allowing you to work efficiently with ANTLR grammar files and generate lexer and parser code seamlessly.
 
-![Parse tree](https://imgur.com/a/xwgtvfx)
-
 ### Grammar Definition
 
 The grammar defines the structure of the input file that specifies an NFA. The grammar file (NFA2.g4) is as follows:
@@ -80,9 +78,12 @@ The grammar defines the structure of the input file that specifies an NFA. The g
         WS : [ \t\r\n]+ -> skip;
 
 This grammar defines rules for specifying states, transitions, and initial and accepting states of an NFA.
-Interpreter Explanation
+![Parse tree](https://imgur.com/a/xwgtvfx)
+
+### Interpreter Explanation
 
 The interpreter takes a text file that adheres to the defined grammar, parses it, and generates the LaTeX code necessary to visualize the state diagram.
+
 ### Data Input
 
 The input file (TEST.txt) should follow this structure, based on the defined grammar:
