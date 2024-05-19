@@ -4,41 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="172ec743-0aad-4bc8-9556-56ccfdfdd248" name="Changes" comment="Parte latex, creado grammar y interprete">
-      <change afterPath="$PROJECT_DIR$/NFA2.g4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEST.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFA2.interp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFA2.tokens" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFA2BaseVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFA2Lexer.interp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFA2Lexer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFA2Lexer.tokens" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFA2Listener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFA2Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFA2Visitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NFAToTikZ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ANTLRv4ToolGrammarProperties.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ANTLRv4ToolGrammarProperties.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NFAs_TEST.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/NFAs_TEST.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/latex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/latex.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interprete.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NFA.interp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NFA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NFA.tokens" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NFABaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NFA2BaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NFABaseVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NFAInterpreter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NFALexer.interp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NFALexer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NFALexer.tokens" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NFAListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NFAParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NFAToDFALatexListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NFAVisitor.java" beforeDir="false" />
-    </list>
+    <list default="true" id="172ec743-0aad-4bc8-9556-56ccfdfdd248" name="Changes" comment="agregado interprete correcto, mirar estilos solapamiento y con mas nodos" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +55,7 @@
     "Application.NFAToTikZ.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Katty/IdeaProjects/latex/src",
