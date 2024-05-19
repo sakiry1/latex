@@ -1,0 +1,1 @@
+states q0,q1,q2 initial q0 accepting q2 transitions q0 -> q1 on a,q1 -> q2 on b, q0 -> q2 on c
