@@ -5,6 +5,10 @@ import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -37,8 +41,26 @@ public class NFAToTikZ {
     }
 
     public static void main(String[] args) throws Exception {
-        CharStream input = CharStreams.fromFileName("TEST.txt");
+        try (BufferedReader reader = new BufferedReader(new FileReader("TEST.txt"));
+             FileWriter writer = new FileWriter("nfa_output.tex")) {
+            writer.write("\\documentclass{article}\n");
+            writer.write("\\usepackage{tikz}\n");
+            writer.write("\\usetikzlibrary{automata, positioning}\n");
+            writer.write("\\begin{document}\n");
 
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (!line.trim().isEmpty()) {
+                    processLine(line, writer);
+                }
+            }
+
+            writer.write("\\end{document}\n");
+        }
+    }
+
+    private static void processLine(String line, FileWriter writer) throws IOException {
+        CharStream input = CharStreams.fromString(line);
 
         NFA2Lexer lexer = new NFA2Lexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
@@ -49,54 +71,52 @@ public class NFAToTikZ {
         NFACustomListener listener = new NFACustomListener();
         walker.walk(listener, tree);
 
-        generateLatexCircular(listener.states, listener.transitions);
+        generateLatexDiagram(listener.states, listener.transitions, writer);
     }
 
-    public static void generateLatexCircular(Map<String, State> states, List<Transition> transitions) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("\\documentclass{article}\n");
-        sb.append("\\usepackage{tikz}\n");
-        sb.append("\\usetikzlibrary{automata, positioning}\n");
-        sb.append("\\begin{document}\n");
-        sb.append("\\begin{tikzpicture}[shorten >=1pt, node distance=3cm, on grid, auto]\n");
+    public static void generateLatexDiagram(Map<String, State> states, List<Transition> transitions, FileWriter writer) throws IOException {
+        writer.write("\\begin{tikzpicture}[scale=1.5, node distance=0.5 and 3]\n");
 
-        sb.append("\\tikzstyle{state}=[circle, draw, minimum size=1.5cm, text centered, text width=1.5cm]\n");
+        List<String> stateNames = new ArrayList<>(states.keySet());
 
-        int n = states.size();
-        int i = 0;
-        for (State state : states.values()) {
-            double angle = 2 * Math.PI * i / n;
-            double x = 5 * Math.cos(angle);
-            double y = 5 * Math.sin(angle);
+        int rows = (int) Math.ceil(Math.sqrt(stateNames.size())); // Calcula el número de filas necesarias
+        int cols = (int) Math.ceil((double) stateNames.size() / rows); // Calcula el número de columnas
+
+        double xStep = 4; // Espacio horizontal entre los nodos
+        double yStep = 3; // Espacio vertical entre los nodos
+
+        for (int i = 0; i < stateNames.size(); i++) {
+            String stateName = stateNames.get(i);
+            State state = states.get(stateName);
+
+            double x = (i % cols) * xStep;
+            double y = -(i / cols) * yStep;
+
+            String stateStyle = "state";
             if (state.isInitial) {
-                sb.append(String.format("\\node[state, initial] (%s) at (%.2f, %.2f) {%s};\n", state.name, x, y, state.name)); //todo  REVISAR PQ el nodo normal se aleja
-            } else if (state.isAccepting) {                                                                                       //TODO revisar con mas nodos
-                sb.append(String.format("\\node[state, accepting] (%s) at (%.2f, %.2f) {%s};\n", state.name, x, y, state.name));  //toDO Y la documentacion README
-            } else {
-                sb.append(String.format("\\node[state] (%s) at (%.2f, %.2f) {%s};\n", state.name, x, y, state.name));
+                stateStyle += ", initial";
             }
-            i++;
+            if (state.isAccepting) {
+                stateStyle += ", accepting";
+            }
+
+            writer.write(String.format("\\node[%s] (%s) at (%.2f, %.2f) {$%s$};\n",
+                    stateStyle, stateName, x, y, stateName));
         }
 
+        // Genera las transiciones
         for (Transition transition : transitions) {
-            sb.append(String.format("\\path[->] (%s) edge node {$%s$} (%s);\n",
+            writer.write(String.format("\\path[->] (%s) edge[bend right=15] node {$%s$} (%s);\n",
                     transition.from, transition.symbol, transition.to));
         }
 
-        sb.append("\\end{tikzpicture}\n");
-        sb.append("\\end{document}\n");
-
-        System.out.println(sb.toString());
+        writer.write("\\end{tikzpicture}\n\\newpage\n");
     }
-
-
 }
 
 class NFACustomListener extends NFA2BaseListener {
     Map<String, NFAToTikZ.State> states = new HashMap<>();
     List<NFAToTikZ.Transition> transitions = new ArrayList<>();
-    String initialState;
-    List<String> acceptingStates = new ArrayList<>();
 
     @Override
     public void exitStates(NFA2Parser.StatesContext ctx) {
@@ -108,7 +128,7 @@ class NFACustomListener extends NFA2BaseListener {
 
     @Override
     public void exitInitial(NFA2Parser.InitialContext ctx) {
-        initialState = ctx.ID().getText();
+        String initialState = ctx.ID().getText();
         states.get(initialState).isInitial = true;
     }
 

@@ -1,1 +1,2 @@
 states q0,q1,q2 initial q0 accepting q2 transitions q0 -> q1 on a,q1 -> q2 on b, q0 -> q2 on c
+states q0,q1,q2,q3,q4,q5,q6 initial q0 accepting q4 transitions q0 -> q1 on a, q0 -> q3 on a,q0 -> q4 on a,q0 -> q5 on a,q1 -> q2 on e,q5 -> q6 on a
