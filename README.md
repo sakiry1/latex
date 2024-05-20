@@ -93,7 +93,7 @@ The input file (TEST.txt) should follow this structure, based on the defined gra
 ### Generation of LaTeX Code
 
 The generated LaTeX code is as follows:
-
+#### NFA1
       \documentclass{article}
       \usepackage{tikz}
       \usetikzlibrary{automata, positioning}
@@ -106,7 +106,7 @@ The generated LaTeX code is as follows:
       \path[->] (q1) edge[bend right=15] node {$b$} (q2);
       \path[->] (q0) edge[bend right=15] node {$c$} (q2);
       \end{tikzpicture}
-
+#### NFA2
       \begin{tikzpicture}[scale=1.5, node distance=0.5 and 3]
       \node[state] (q1) at (0,00, 0,00) {$q1$};
       \node[state] (q2) at (4,00, 0,00) {$q2$};
@@ -125,6 +125,9 @@ The generated LaTeX code is as follows:
 
 This LaTeX code can be compiled using any LaTeX editor (such as Overleaf, TeXShop, etc.) to generate the state diagram.
 ### Testing with Leaflet
+![NFA 1](https://github.com/sakiry1/latex/assets/38807848/b6406991-c16a-4152-9c6e-053a6993e1e7)
+
+![NFA 2](https://github.com/sakiry1/latex/assets/38807848/4cede6ce-ee87-487b-a123-4a5acf03bfe2)
 
 After generating the LaTeX code and compiling it to obtain the state diagram, you can use tools like Leaflet to display the diagram interactively on a webpage for testing and visualization purposes
 
