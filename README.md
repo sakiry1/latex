@@ -94,34 +94,37 @@ The input file (TEST.txt) should follow this structure, based on the defined gra
 
 The generated LaTeX code is as follows:
 
-        \documentclass{article}
-        \usepackage{tikz}
-        \usetikzlibrary{automata, positioning}
-        \begin{document}
-        \begin{tikzpicture}[shorten >=1pt, node distance=3cm, on grid, auto]
-        \tikzstyle{state}=[circle, draw, minimum size=1.5cm, text centered, text width=1.5cm]
-        \node[state] (q1) at (5,00, 0,00) {q1};
-        \node[state, accepting] (q2) at (-2,50, 4,33) {q2};
-        \node[state, initial] (q0) at (-2,50, -4,33) {q0};
-        \path[->] (q0) edge node {$a$} (q1);
-        \path[->] (q1) edge node {$b$} (q2);
-        \path[->] (q0) edge node {$c$} (q2);
-        \end{tikzpicture}
-        \end{document}
+      \documentclass{article}
+      \usepackage{tikz}
+      \usetikzlibrary{automata, positioning}
+      \begin{document}
+      \begin{tikzpicture}[scale=1.5, node distance=0.5 and 3]
+      \node[state] (q1) at (0,00, 0,00) {$q1$};
+      \node[state, accepting] (q2) at (4,00, 0,00) {$q2$};
+      \node[state, initial] (q0) at (0,00, -3,00) {$q0$};
+      \path[->] (q0) edge[bend right=15] node {$a$} (q1);
+      \path[->] (q1) edge[bend right=15] node {$b$} (q2);
+      \path[->] (q0) edge[bend right=15] node {$c$} (q2);
+      \end{tikzpicture}
+
+      \begin{tikzpicture}[scale=1.5, node distance=0.5 and 3]
+      \node[state] (q1) at (0,00, 0,00) {$q1$};
+      \node[state] (q2) at (4,00, 0,00) {$q2$};
+      \node[state] (q3) at (8,00, 0,00) {$q3$};
+      \node[state, accepting] (q4) at (0,00, -3,00) {$q4$};
+      \node[state] (q5) at (4,00, -3,00) {$q5$};
+      \node[state] (q6) at (8,00, -3,00) {$q6$};
+      \node[state, initial] (q0) at (0,00, -6,00) {$q0$};
+      \path[->] (q0) edge[bend right=15] node {$a$} (q1);
+      \path[->] (q0) edge[bend right=15] node {$a$} (q3);
+      \path[->] (q0) edge[bend right=15] node {$a$} (q4);
+      \path[->] (q0) edge[bend right=15] node {$a$} (q5);
+      \path[->] (q1) edge[bend right=15] node {$e$} (q2);
+      \path[->] (q5) edge[bend right=15] node {$a$} (q6);
+      \end{tikzpicture}
 
 This LaTeX code can be compiled using any LaTeX editor (such as Overleaf, TeXShop, etc.) to generate the state diagram.
 ### Testing with Leaflet
 
 After generating the LaTeX code and compiling it to obtain the state diagram, you can use tools like Leaflet to display the diagram interactively on a webpage for testing and visualization purposes
 
-### Program Execution
-
-To run the program, follow these steps:
-Ensure that the TEST.txt file contains the NFA specification.
-Execute the program in IntelliJ IDEA or from the command line:
-
-        Ejecucion java
-        prueba
-
-
-The program will print the generated LaTeX code in the console. You can copy and paste this code into a LaTeX editor to generate the state diagram.
